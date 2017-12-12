@@ -1,0 +1,22 @@
+{
+  "name": "bower.json",
+  "authors": [
+    "ebinezerp <ebinezer.p87@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "4.0.0-alpha"
+  }
+}
