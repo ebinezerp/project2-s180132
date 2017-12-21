@@ -12,3 +12,17 @@ $routeProvider.when("/",{
   templateUrl:'app/portalindex.html'
 })
 })
+
+
+
+PortalModule.controller('NavigationController',['$scope',function($scope){
+  this.existingUser=true;
+
+  this.userController=function(existance)
+  {
+    this.existingUser=existance;
+  }
+
+
+
+}])

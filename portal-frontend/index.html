@@ -21,7 +21,27 @@
   <body ng-app="PortalModule">
 
 <div id="wrapper" class="container-fluid">
+  <div class="" id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <h2>Portal</h2>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <nav class="nav menu" ng-controller="NavigationController as navCtrl">
+              <a ng-hide='!navCtrl.existingUser' ng-click="navCtrl.userController(false)" class="nav-link" href="#!/register">Register</a>
+              <a ng-hide='navCtrl.existingUser' ng-click="navCtrl.userController(true)" class="nav-link" href="#!/login">Login</a>
+
+            </nav>
+          </div>
+        </div>
+      </div>
+  </div>
    <ng-view></ng-view>
+
+   <div class="container-fluid" id="footer">
+     This is footer
+   </div>
  </div>
   </body>
 </html>
