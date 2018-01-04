@@ -8,9 +8,11 @@
 	<name>portal-middleware Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-	<failOnMissingWebXml>false</failOnMissingWebXml>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -31,7 +33,25 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>5.0.2.RELEASE</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>5.0.0.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>5.0.0.RELEASE</version>
+		</dependency>
 
+<!-- Backend Project -->
+		<dependency>
+			<groupId>my.personal.project</groupId>
+			<artifactId>portal-backend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 	<build>

@@ -6,18 +6,24 @@
            <input type="text" name="firstname" value="" ng-model="userCtrl.user.firstname" class="form-control col-sm-12" placeholder="First Name" required="true" pattern="[a-z]{4,}">
 
            <div ng-show="regform.firstname.$touched">
-             <span ng-show="regform.firstname.$error.required">Enter the name</span>
-             <span ng-show="regform.firstname.$invalid">Only small characters min 4</span>
+             <!-- <span ng-show="regform.firstname.$error.required">Enter the name</span> -->
+             <span ng-show="regform.firstname.$invalid">Only small characters. min 4 characters</span>
            </div>
-
-
-           </div>
+         </div>
 
          <div class="form-group row">
-           <input type="text" name="lastname" value="" ng-model="userCtrl.user.lastname" class="form-control col-sm-12" placeholder="Last Name" required>
+           <input type="text" name="lastname" value="" ng-model="userCtrl.user.lastname" class="form-control col-sm-12" placeholder="Last Name" required="true" pattern="[a-z]{4,}">
+           <div ng-show="regform.lastname.$touched">
+             <!-- <span ng-show="regform.lastname.$error.required">Enter Last Name</span> -->
+             <span ng-show="regform.lastname.$invalid">Only small characters. min 4 characters</span>
+           </div>
          </div>
          <div class="form-group row">
-           <input type="text" name="email" value="" ng-model="userCtrl.user.email" class="form-control col-sm-12" placeholder="Email" required>
+           <input type="text" name="email" value="" ng-model="userCtrl.user.email" class="form-control col-sm-12" placeholder="Email" required="true" ng-blur="userCtrl.emailExisted()">
+           <div ng-show="regform.email.$touched">
+             <!-- <span ng-show="regform.firstname.$error.required">Enter the name</span> -->
+             <span ng-show="regform.email.$invalid">Only small characters. min 4 characters</span>
+           </div>
          </div>
          <div class="form-group row">
            <input type="text" name="mobile" value="" ng-model="userCtrl.user.mobile" class="form-control col-sm-12" placeholder="Mobile" required>
